@@ -22,12 +22,18 @@ export default function Page(){
         setProdutos(await r.json());
       }catch(e){
         setProdutos([
-          {id:1,nome:'Margherita',preco:39.9,imagem:'',categoria:'Contábil',descricao:'Tomate, muçarela e manjericão'},
-          {id:2,nome:'Calabresa',preco:42.9,imagem:'',categoria:'Contábil',descricao:'Calabresa e cebola roxa'},
-          {id:3,nome:'Coca-Cola Lata',preco:8.0,imagem:'',categoria:'Contábil',descricao:''},
-          {id:4,nome:'Ceveja Skin Cariol',preco:11.0,imagem:'',categoria:'Fiscal',descricao:''},
-          {id:5,nome:'Modelo Conta',preco:11.0,imagem:'',categoria:'Cadastro',descricao:''},
-          {id:6,nome:'Lancamento Contábil',preco:11.0,imagem:'',categoria:'Lançammento',descricao:''},
+          {id:1,nome:'Margherita',preco:39.9,imagem:'',categoria:'Contábil',descricao:'Relatório DER'},
+          {id:2,nome:'Calabresa',preco:42.9,imagem:'',categoria:'Contábil',descricao:'Relatório Balanço'},
+          {id:3,nome:'Coca-Cola Lata',preco:8.0,imagem:'',categoria:'Contábil',descricao:'Relatório Balancete'},
+          {id:4,nome:'Ceveja Skin Cariol',preco:11.0,imagem:'',categoria:'Fiscal',descricao:'Reusltados'},
+          {id:5,nome:'Modelo Conta',preco:11.0,imagem:'',categoria:'Cadastro',descricao:'Cadastro de Modelos'},
+          {id:6,nome:'Lancamento Contábil',preco:11.0,imagem:'',categoria:'Lançammento',descricao:'Lançamentos Manuais'},
+          {id:7,nome:'Margherita',preco:39.9,imagem:'',categoria:'Contábil',descricao:'Balancete'},
+          {id:8,nome:'Calabresa',preco:42.9,imagem:'',categoria:'Contábil',descricao:'Razonete'},
+          {id:9,nome:'Coca-Cola Lata',preco:8.0,imagem:'',categoria:'Contábil',descricao:'Balanço KPPI'},
+          {id:10,nome:'Ceveja Skin Cariol',preco:11.0,imagem:'',categoria:'Fiscal',descricao:'TESTE'},
+          {id:11,nome:'Modelo Conta',preco:11.0,imagem:'',categoria:'Cadastro',descricao:'TESTE'},
+          {id:12,nome:'Lancamento Contábil',preco:11.0,imagem:'',categoria:'Lançammento',descricao:'STE'},
         ]);
       }
     }
