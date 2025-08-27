@@ -22,18 +22,18 @@ export default function Page(){
         setProdutos(await r.json());
       }catch(e){
         setProdutos([
-          {id:1,nome:'Margherita',preco:39.9,imagem:'',categoria:'Contábil',descricao:'Relatório DER'},
-          {id:2,nome:'Calabresa',preco:42.9,imagem:'',categoria:'Contábil',descricao:'Relatório Balanço'},
-          {id:3,nome:'Coca-Cola Lata',preco:8.0,imagem:'',categoria:'Contábil',descricao:'Relatório Balancete'},
-          {id:4,nome:'Ceveja Skin Cariol',preco:11.0,imagem:'',categoria:'Fiscal',descricao:'Reusltados'},
+          {id:1,nome:'Relatório',preco:39.9,imagem:'',categoria:'Contábil',descricao:'Relatório DER'},
+          {id:2,nome:'Relatório',preco:42.9,imagem:'',categoria:'Contábil',descricao:'Relatório Balanço'},
+          {id:3,nome:'Relatório',preco:8.0,imagem:'',categoria:'Contábil',descricao:'Relatório Balancete'},
+          {id:4,nome:'Relatório',preco:11.0,imagem:'',categoria:'Fiscal',descricao:'Reusltados'},
           {id:5,nome:'Modelo Conta',preco:11.0,imagem:'',categoria:'Cadastro',descricao:'Cadastro de Modelos'},
-          {id:6,nome:'Lancamento Contábil',preco:11.0,imagem:'',categoria:'Lançammento',descricao:'Lançamentos Manuais'},
-          {id:7,nome:'Margherita',preco:39.9,imagem:'',categoria:'Contábil',descricao:'Balancete'},
-          {id:8,nome:'Calabresa',preco:42.9,imagem:'',categoria:'Contábil',descricao:'Razonete'},
-          {id:9,nome:'Coca-Cola Lata',preco:8.0,imagem:'',categoria:'Contábil',descricao:'Balanço KPPI'},
-          {id:10,nome:'Ceveja Skin Cariol',preco:11.0,imagem:'',categoria:'Fiscal',descricao:'TESTE'},
-          {id:11,nome:'Modelo Conta',preco:11.0,imagem:'',categoria:'Cadastro',descricao:'TESTE'},
-          {id:12,nome:'Lancamento Contábil',preco:11.0,imagem:'',categoria:'Lançammento',descricao:'STE'},
+          {id:6,nome:'Lancamentos',preco:11.0,imagem:'',categoria:'Lançammento',descricao:'Lançamentos Manuais'},
+          {id:7,nome:'Relatório',preco:39.9,imagem:'',categoria:'Contábil',descricao:'Balancete'},
+          {id:8,nome:'Relatório',preco:42.9,imagem:'',categoria:'Contábil',descricao:'Razonete'},
+          {id:9,nome:'Relatório',preco:8.0,imagem:'',categoria:'Contábil',descricao:'Balanço KPPI'},
+          {id:10,nome:'Relatório',preco:11.0,imagem:'',categoria:'Gerenciail',descricao:'Resultado'},
+          {id:11,nome:'Modelo Conta',preco:11.0,imagem:'',categoria:'Cadastro',descricao:'Mensal'},
+          {id:12,nome:'Relatório',preco:11.0,imagem:'',categoria:'Gerencial',descricao:'Anual'},
         ]);
       }
     }
@@ -103,7 +103,7 @@ export default function Page(){
                 <div className="text-right font-extrabold text-sky-300">{BRL.format(p.preco)}</div>
               </div>
               <div className="flex gap-2">
-                <button className="btn bg-white/10 flex-1" onClick={()=>add(p)}>Adicionar</button>
+                <button className="btn bg-white/10 flex-1" onClick={()=>add(p)}>Aplicar</button>
               </div>
             </div>
           </div>
