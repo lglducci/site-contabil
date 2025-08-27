@@ -25,6 +25,7 @@ export default function Page(){
           {id:1,nome:'Margherita',preco:39.9,imagem:'',categoria:'PIZZAS',descricao:'Tomate, muçarela e manjericão'},
           {id:2,nome:'Calabresa',preco:42.9,imagem:'',categoria:'PIZZAS',descricao:'Calabresa e cebola roxa'},
           {id:3,nome:'Coca-Cola Lata',preco:8.0,imagem:'',categoria:'BEBIDAS',descricao:''},
+          {id:4,nome:'Ceveja Skin Cariol',preco:11.0,imagem:'',categoria:'BEBIDAS',descricao:''},
         ]);
       }
     }
