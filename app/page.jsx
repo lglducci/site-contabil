@@ -3,8 +3,8 @@
 import { useEffect, useMemo, useState } from 'react';
 
 const BRL = new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'});
-const BRAND = process.env.NEXT_PUBLIC_BRAND || 'Minha Pizzaria';
-const WHATS = process.env.NEXT_PUBLIC_WHATSAPP || '5599999999999';
+const BRAND = process.env.NEXT_PUBLIC_BRAND || 'Contabilidade';
+const WHATS = process.env.NEXT_PUBLIC_WHATSAPP || '5516992975836';
 const MENU_URL = process.env.NEXT_PUBLIC_N8N_MENU_URL;
 
 export default function Page(){
