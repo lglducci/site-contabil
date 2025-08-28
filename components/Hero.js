@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="container py-10 grid md:grid-cols-2 gap-8 items-center">
       <div>
         <h1 className="text-3xl md:text-5xl font-bold mb-4">
-          Gestão contábil & gerencial <span className="text-primary">multiempresa</span>
+          Gestão Contábil & Gerencial <span className="text-primary">multiempresa</span>
         </h1>
         <p className="text-gray-600 mb-6">
           Escolha um plano de contas por segmento, importe dados e receba relatórios gerenciais,
