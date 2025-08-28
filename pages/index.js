@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Head>
         <title>SuaPlataforma – Gestão Multiempresa</title>
-        <meta name="description" content="Gestão contábil e gerencial multiempresa com planos de contas por segmento." />
+        <meta name="description" content="Gestão contábil e Gerencial Multiempresa com Planos de Contas por Segmento." />
       </Head>
       <Header />
       <main>
