@@ -14,6 +14,7 @@ export default function Header() {
             <li><Link href="/cadastro">Cadastro</Link></li>
             <li><a href="#segmentos">Segmentos</a></li>
             <li><Link href="/planos">Planos</Link></li>
+            <li><Link href="/precos">Preços</Link></li>
           </ul>
         </nav>
       </div>
