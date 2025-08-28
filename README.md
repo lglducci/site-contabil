@@ -1,24 +1,34 @@
-# Site de Gestão (Pages Router, Webhook-First)
+# Site de Gestão (Pages Router, Webhook-First) — v0.2
 
-Landing bonita estilo Amazon + tela de cadastro. Todas as ações de backend passam por `/api/proxy/*` e são encaminhadas para `WEBHOOK_BASE_URL` com assinatura HMAC e idempotência.
+Landing estilo Amazon + cadastro via webhook + **Planos por Setor (PDF)**.
 
-## Rodar local
+## Como rodar
 ```bash
 npm install
 cp .env.local.sample .env.local
+# preencha WEBHOOK_BASE_URL e WEBHOOK_SIGNING_SECRET
 npm run dev
 ```
-Edite `.env.local`:
+Acesse: `http://localhost:3000` e `/planos`.
 
-```
-WEBHOOK_BASE_URL=https://api.seu-dominio.com/webhooks
-WEBHOOK_SIGNING_SECRET=supersegredo
-```
+### Variáveis de ambiente
+- `WEBHOOK_BASE_URL` → ex.: `https://webhook.site/<token>` (para demo) ou seu backend
+- `WEBHOOK_SIGNING_SECRET` → segredo HMAC
+
+### Webhooks esperados
+- `POST /ia/sugerir-plano` → retorna `{ proposal_id, pdf_url }`
+- `POST /planos/importar` → upload CSV/JSON do plano
+- (opcional) `POST /ia/aprovar-plano`
 
 ## Estrutura
-- `pages/` (Pages Router): `index.js` (Home), `cadastro.js` (Lead), `api/proxy/[...path].js` (proxy webhook)
-- `components/`: Header, MegaMenu, Hero, CategoryGrid, FeatureHighlights, Footer, LeadForm
-- `lib/webhook.js`: assinatura e forward
-- `styles/globals.css`: Tailwind
+- `pages/` → `index`, `cadastro`, `planos`, `api/proxy/[...path].js`
+- `components/` → Header, MegaMenu, Hero, CategoryGrid, FeatureHighlights, LeadForm, PlanUpload
+- `lib/` → `webhook.js`, `constants.js` (listas centralizadas)
+- `public/` → logo/hero e `mock/*.svg` por segmento
+- `styles/` → Tailwind
+- `jsconfig.json` → alias `@/` habilitado
+- `.gitignore` → evita subir `.next/` e `node_modules/`
 
-Depois de subir no GitHub, importe no Vercel e configure as variáveis de ambiente.
+## Notas
+- Se o PDF não abrir no embed, use o link "Abrir em nova aba".
+- Em produção (Vercel), configure as variáveis nas Project Settings.

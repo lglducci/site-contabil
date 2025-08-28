@@ -1,15 +1,18 @@
 import { useState } from 'react'
 import { z } from 'zod'
+import { SEGMENTOS } from '@/lib/constants'
+
+const SEGMENT_VALUES = SEGMENTOS.map(s => s.slug)
 
 const schema = z.object({
   nome: z.string().min(2, 'Informe seu nome'),
   email: z.string().email('Email inválido'),
-  segmento: z.enum(['restaurante','pizzaria','autopecas','varejo','servicos']),
+  segmento: z.enum(SEGMENT_VALUES),
   telefone: z.string().min(8, 'Telefone inválido')
 })
 
 export default function LeadForm() {
-  const [form, setForm] = useState({ nome: '', email: '', segmento: 'restaurante', telefone: '' })
+  const [form, setForm] = useState({ nome: '', email: '', segmento: SEGMENT_VALUES[0] || 'restaurante', telefone: '' })
   const [status, setStatus] = useState('')
   const [errors, setErrors] = useState(null)
 
@@ -50,11 +53,7 @@ export default function LeadForm() {
       <div>
         <label className="block text-sm mb-1">Segmento</label>
         <select className="w-full border rounded px-3 py-2" value={form.segmento} onChange={e=>setForm({...form, segmento: e.target.value})}>
-          <option value="restaurante">Restaurante</option>
-          <option value="pizzaria">Pizzaria</option>
-          <option value="autopecas">Autopeças</option>
-          <option value="varejo">Varejo</option>
-          <option value="servicos">Serviços</option>
+          {SEGMENTOS.map(s => <option key={s.slug} value={s.slug}>{s.nome}</option>)}
         </select>
       </div>
       <div>
